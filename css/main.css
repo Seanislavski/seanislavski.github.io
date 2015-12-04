@@ -118,7 +118,7 @@ a {
 
 .box {
 	width: 270px;
-	height: 270px;
+	/*height: 270px;*/
 	color: white;
 	margin: 0 auto;
 	background-color: rgb(59, 110, 195);
