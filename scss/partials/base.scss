@@ -1,7 +1,8 @@
 @import "variables";
 
 body {
-  background: $bgcolor;
+	background: $bgcolor;
+	// @include css-gradient($bgcolor, $bgcolor2)
 }
 
 nav {
@@ -15,6 +16,7 @@ nav {
 			content: "";
 			clear: both;
 			display: inline-flex;
+
 		}
 
 		a:hover {
@@ -30,11 +32,10 @@ nav {
 			list-style: none;
 			display: flex;
 			border-radius: 5px;
-
+			box-shadow: $boxsh;
 			li:hover {
-
-				// background: $nhovergray;
-				@include css-gradient($color0,$color1);
+				background: $nhg2;
+				@include css-gradient($nhg2, $nhg3);
 			}
 
 			li:hover a {
@@ -54,7 +55,9 @@ nav {
 				padding: 0;
 				position: absolute;
 				display: none;
-				border-radius: 0px;
+				// border-radius: 0px;
+				border-top-right-radius: 0px;
+				border-top-left-radius: 0px;
 				border-bottom: $border;
 				background: $nselected;
 				// background: linear-gradient(top, $nhg2 0%, $nhg3 80%);
@@ -62,6 +65,7 @@ nav {
 				// background: -webkit-linear-gradient(top, $nhg2 0%, $nhg3 80%);
 				font-size: 14px;
 				line-height: 20px;
+				box-shadow: none;
 			}
 
 			ul:after {
@@ -73,6 +77,7 @@ nav {
 			li:hover > ul {
 				display: flex;
 				flex-flow: column nowrap;
+
 			}
 
 			ul > li{
@@ -81,11 +86,11 @@ nav {
 			}
 
 			ul ul {
-				border-style: none;
-				position: relative;
+				// border-style: none;
+				// position: relative;
 				display: none;
 				/*flex-style: space-between;*/
-				} // nav ul ul end
+				}										// nav ul ul end
 
 			ul > li {
 			/*display: inline-flex;*/
@@ -93,7 +98,9 @@ nav {
 			}
 
 			ul li:hover > ul {
-				flex-flow: row nowrap;
+				flex-flow: column nowrap;
+				flex-align: center;
+				width: 115px;
 			}
 
 		} // nav ul end
@@ -131,5 +138,6 @@ a {
 	background-color: $boxbg;
 	padding: 10px;
 	border-radius: 5px;
-	box-shadow: 0px 0px 9px $boxshad;
+	box-shadow: $boxsh;
+
 }

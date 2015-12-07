@@ -20,7 +20,7 @@ probably best not to use it. I mean, were you going to anyway? */
 Transparency!
 *********************/
 body {
-  background: #0F4882; }
+  background: #054382; }
 
 nav {
   margin: 30px auto;
@@ -48,14 +48,16 @@ nav {
     padding: 0 15px;
     list-style: none;
     display: flex;
-    border-radius: 5px; }
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.9); }
     nav ul li:hover {
-      background-color: #5f6975;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(#4f5964), to(#5f6975));
-      background-image: -webkit-linear-gradient(top, #4f5964, #5f6975);
-      background-image: -moz-linear-gradient(top, #4f5964, #5f6975);
-      background-image: -o-linear-gradient(top, #4f5964, #5f6975);
-      background-image: linear-gradient(to bottom, #4f5964, #5f6975); }
+      background: #7B7B7B;
+      background-color: #656565;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#7B7B7B), to(#656565));
+      background-image: -webkit-linear-gradient(top, #7B7B7B, #656565);
+      background-image: -moz-linear-gradient(top, #7B7B7B, #656565);
+      background-image: -o-linear-gradient(top, #7B7B7B, #656565);
+      background-image: linear-gradient(to bottom, #7B7B7B, #656565); }
     nav ul li:hover a {
       color: #ffffff; }
     nav ul li a {
@@ -68,11 +70,13 @@ nav {
       padding: 0;
       position: absolute;
       display: none;
-      border-radius: 0px;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
       border-bottom: 1px solid #B8B8B8;
       background: #797979;
       font-size: 14px;
-      line-height: 20px; }
+      line-height: 20px;
+      box-shadow: none; }
     nav ul ul:after {
       content: "";
       clear: both;
@@ -83,14 +87,14 @@ nav {
     nav ul ul > li {
       display: inline-flex; }
     nav ul ul ul {
-      border-style: none;
-      position: relative;
       display: none;
       /*flex-style: space-between;*/ }
     nav ul ul > li {
       /*display: inline-flex;*/ }
     nav ul ul li:hover > ul {
-      flex-flow: row nowrap; }
+      flex-flow: column nowrap;
+      flex-align: center;
+      width: 115px; }
   nav li li ul > li {
     /*background: pink;*/
     background: #696969;
