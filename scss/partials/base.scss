@@ -1,0 +1,134 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $bgcolor;
+}
+
+nav {
+		margin: 30px auto;
+		font-family: Helvetica, sans-serif;
+		font-size: 18px;
+		line-height: 24px;
+		clear:both;
+		ul:after {
+		content: "";
+		clear: both;
+		display: inline-flex;
+		}
+	a:hover {
+			color: $white;
+		}
+
+	ul {
+		/*bg stuff*/
+		background: $navgray;
+		@include css-gradient($navgray, $navgray2);
+		/* end bg stuff*/
+		padding: 0 15px;
+		list-style: none;
+		display: flex;
+		border-radius: 5px;
+
+			li:hover {
+				
+				// background: $nhovergray;
+				@include css-gradient($color0,$color1);
+			}
+
+			li:hover a {
+				color: $white;
+			}
+
+			li a {
+				list-style: none;
+				display: inline-flex;
+				list-style: none;
+				padding: 15px 15px;
+				text-decoration: none;
+				// color: $fnavmenu;
+			}
+
+			ul {
+				padding: 0;
+				position: absolute;
+				display: none;
+				border-radius: 0px;
+				background: $nselected;
+				// background: linear-gradient(top, $nhg2 0%, $nhg3 80%);
+				// background: -moz-linear-gradient(top, $nhg2 0%, $nhg3 80%);
+				// background: -webkit-linear-gradient(top, $nhg2 0%, $nhg3 80%);
+				font-size: 14px;
+				line-height: 20px;
+			}
+
+			ul:after {
+				content: "";
+				clear: both;
+				display: inline-flex;
+			}
+
+			li:hover > ul {
+				display: flex;
+				flex-flow: column nowrap;
+			}
+
+			ul > li{
+				display: inline-flex;
+				border-bottom-color: $border;
+				border-bottom-style: solid;
+				border-width: 1px;
+			}
+
+			ul ul {
+
+				position: relative;
+				display: none;
+				/*flex-style: space-between;*/
+				} // nav ul ul end
+
+			ul > li {
+			/*display: inline-flex;*/
+			border-bottom-width: 0;
+			}
+
+		} // nav ul end
+
+
+		li li ul > li {
+			/*background: pink;*/
+			background: $nhovergray;
+			/*background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+			background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+			background: -webkit-linear-gradient(top, #4f5964 0%, #5f6975 40%);*/
+		} 
+		
+} // nav end
+
+ul {
+	display: flex;
+}
+
+a {
+	color: $linkcol;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	width: 270px;
+	/*height: 270px;*/
+	color: $white;
+	margin: 0 auto;
+	background-color: $boxbg;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 9px $boxshad;
+}
