@@ -1,9 +1,5 @@
 @import "variables";
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   background: $bgcolor;
 }
@@ -13,28 +9,30 @@ nav {
 		font-family: Helvetica, sans-serif;
 		font-size: 18px;
 		line-height: 24px;
+		border: $bordersize none $bordercolor;
 		clear:both;
 		ul:after {
-		content: "";
-		clear: both;
-		display: inline-flex;
-		}
-	a:hover {
-			color: $white;
+			content: "";
+			clear: both;
+			display: inline-flex;
 		}
 
-	ul {
-		/*bg stuff*/
-		background: $navgray;
-		@include css-gradient($navgray, $navgray2);
-		/* end bg stuff*/
-		padding: 0 15px;
-		list-style: none;
-		display: flex;
-		border-radius: 5px;
+		a:hover {
+				color: $white;
+			}
+
+		ul {
+			/*bg stuff*/
+			background: $navgray;
+			@include css-gradient($navgray, $navgray2);
+			/* end bg stuff*/
+			padding: 0 15px;
+			list-style: none;
+			display: flex;
+			border-radius: 5px;
 
 			li:hover {
-				
+
 				// background: $nhovergray;
 				@include css-gradient($color0,$color1);
 			}
@@ -57,6 +55,7 @@ nav {
 				position: absolute;
 				display: none;
 				border-radius: 0px;
+				border-bottom: $border;
 				background: $nselected;
 				// background: linear-gradient(top, $nhg2 0%, $nhg3 80%);
 				// background: -moz-linear-gradient(top, $nhg2 0%, $nhg3 80%);
@@ -78,13 +77,11 @@ nav {
 
 			ul > li{
 				display: inline-flex;
-				border-bottom-color: $border;
-				border-bottom-style: solid;
-				border-width: 1px;
+				// border-bottom: 5px solid $borderstyle;
 			}
 
 			ul ul {
-
+				border-style: none;
 				position: relative;
 				display: none;
 				/*flex-style: space-between;*/
@@ -92,7 +89,11 @@ nav {
 
 			ul > li {
 			/*display: inline-flex;*/
-			border-bottom-width: 0;
+			// border-bottom-width: 0;
+			}
+
+			ul li:hover > ul {
+				flex-flow: row nowrap;
 			}
 
 		} // nav ul end
@@ -104,8 +105,8 @@ nav {
 			/*background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
 			background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
 			background: -webkit-linear-gradient(top, #4f5964 0%, #5f6975 40%);*/
-		} 
-		
+		}
+
 } // nav end
 
 ul {

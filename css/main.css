@@ -19,17 +19,15 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 Transparency!
 *********************/
-* {
-  box-sizing: border-box; }
-
 body {
-  background: #E3E3E3; }
+  background: #0F4882; }
 
 nav {
   margin: 30px auto;
   font-family: Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  border: 1px none #B8B8B8;
   clear: both; }
   nav ul:after {
     content: "";
@@ -39,13 +37,13 @@ nav {
     color: #ffffff; }
   nav ul {
     /*bg stuff*/
-    background: #F0F0F0;
-    background-color: #bbbbbb;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), to(#bbbbbb));
-    background-image: -webkit-linear-gradient(top, #F0F0F0, #bbbbbb);
-    background-image: -moz-linear-gradient(top, #F0F0F0, #bbbbbb);
-    background-image: -o-linear-gradient(top, #F0F0F0, #bbbbbb);
-    background-image: linear-gradient(to bottom, #F0F0F0, #bbbbbb);
+    background: #DCDCDC;
+    background-color: #A7A7A7;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(#A7A7A7));
+    background-image: -webkit-linear-gradient(top, #DCDCDC, #A7A7A7);
+    background-image: -moz-linear-gradient(top, #DCDCDC, #A7A7A7);
+    background-image: -o-linear-gradient(top, #DCDCDC, #A7A7A7);
+    background-image: linear-gradient(to bottom, #DCDCDC, #A7A7A7);
     /* end bg stuff*/
     padding: 0 15px;
     list-style: none;
@@ -71,7 +69,8 @@ nav {
       position: absolute;
       display: none;
       border-radius: 0px;
-      background: #737373;
+      border-bottom: 1px solid #B8B8B8;
+      background: #797979;
       font-size: 14px;
       line-height: 20px; }
     nav ul ul:after {
@@ -82,20 +81,19 @@ nav {
       display: flex;
       flex-flow: column nowrap; }
     nav ul ul > li {
-      display: inline-flex;
-      border-bottom-color: #9A9A9A;
-      border-bottom-style: solid;
-      border-width: 1px; }
+      display: inline-flex; }
     nav ul ul ul {
+      border-style: none;
       position: relative;
       display: none;
       /*flex-style: space-between;*/ }
     nav ul ul > li {
-      /*display: inline-flex;*/
-      border-bottom-width: 0; }
+      /*display: inline-flex;*/ }
+    nav ul ul li:hover > ul {
+      flex-flow: row nowrap; }
   nav li li ul > li {
     /*background: pink;*/
-    background: #545454;
+    background: #696969;
     /*background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
     background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
     background: -webkit-linear-gradient(top, #4f5964 0%, #5f6975 40%);*/ }
@@ -116,7 +114,7 @@ a {
   /*height: 270px;*/
   color: #ffffff;
   margin: 0 auto;
-  background-color: #3b6ec3;
+  background-color: #3B6EC3;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.9); }

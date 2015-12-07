@@ -7,20 +7,20 @@ $black: #000000;
 
 // Page Colors
 
-$bgcolor: #E3E3E3;
+$bgcolor: #0F4882;
 
 $color0: #4f5964;
 $color1: #5f6975;
 $color2: #898989;
 
-$navgray: #F0F0F0;
-$navgray2: #bbbbbb;
+$navgray: #DCDCDC; //gradient 1
+$navgray2: #A7A7A7; //gradient 2
 
-$nhovergray: #545454;
-$nselected: #737373;
+$nhovergray: #696969;
+$nselected: #797979;
 
-$nhg2: #4C4C4C;
-$nhg3: #6D6D6D;
+$nhg2: #6B6B6B;
+$nhg3: #565656;
 
 //font colors
 
@@ -28,10 +28,14 @@ $fnavmenu: #787878;
 
 //borders etc
 
-$border: #9A9A9A;
+$bordercolor: #B8B8B8;
+$bordersize: 1px;
+$borderstyle: solid;
+
+$border: $bordersize $borderstyle $bordercolor;
 
 $linkcol: #606060;
 
-$boxbg: rgb(59, 110, 195);
+$boxbg: #3B6EC3;
 
 $boxshad: rgba(0, 0, 0, 0.9);
