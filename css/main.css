@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
 /*********************
 TRANSITION
 *********************/
@@ -20,19 +22,41 @@ probably best not to use it. I mean, were you going to anyway? */
 Transparency!
 *********************/
 body {
-  background: #054382; }
+  background: #054382;
+  font-family: Rock Salt; }
+
+ul {
+  display: flex; }
+
+a {
+  color: #606060; }
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.box {
+  width: 270px;
+  /*height: 270px;*/
+  color: #ffffff;
+  margin: 0 auto;
+  background-color: #3B6EC3;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.9); }
 
 nav {
   margin: 30px auto;
   font-family: Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
-  border: 1px none #B8B8B8;
+  border: 1px none #000000;
   clear: both; }
   nav ul:after {
     content: "";
     clear: both;
-    display: inline-flex; }
+    display: flex; }
   nav a:hover {
     color: #ffffff; }
   nav ul {
@@ -72,7 +96,7 @@ nav {
       display: none;
       border-top-right-radius: 0px;
       border-top-left-radius: 0px;
-      border-bottom: 1px solid #B8B8B8;
+      border-bottom: 1px solid #000000;
       background: #797979;
       font-size: 14px;
       line-height: 20px;
@@ -88,40 +112,20 @@ nav {
       display: inline-flex; }
     nav ul ul ul {
       display: none;
-      /*flex-style: space-between;*/ }
+      /*flex-style: space-between;*/
+      font-size: 12px;
+      padding: 0; }
     nav ul ul > li {
       /*display: inline-flex;*/ }
     nav ul ul li:hover > ul {
       flex-flow: column nowrap;
-      flex-align: center;
-      width: 115px; }
+      flex-align: center; }
   nav li li ul > li {
     /*background: pink;*/
     background: #696969;
     /*background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
     background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
     background: -webkit-linear-gradient(top, #4f5964 0%, #5f6975 40%);*/ }
-
-ul {
-  display: flex; }
-
-a {
-  color: #606060; }
-
-.flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.box {
-  width: 270px;
-  /*height: 270px;*/
-  color: #ffffff;
-  margin: 0 auto;
-  background-color: #3B6EC3;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.9); }
 
 /******************************************************************
 Site Name: Traxtion	

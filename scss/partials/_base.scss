@@ -1,0 +1,33 @@
+@import "variables";
+
+body {
+	background: $bgcolor;
+	// @include css-gradient($bgcolor, $bgcolor2)
+	font-family: Rock Salt;
+}
+
+ul {
+	display: flex;
+}
+
+a {
+	color: $linkcol;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	width: 270px;
+	/*height: 270px;*/
+	color: $white;
+	margin: 0 auto;
+	background-color: $boxbg;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: $boxsh;
+
+}

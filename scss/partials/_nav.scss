@@ -1,10 +1,3 @@
-@import "variables";
-
-body {
-	background: $bgcolor;
-	// @include css-gradient($bgcolor, $bgcolor2)
-}
-
 nav {
 		margin: 30px auto;
 		font-family: Helvetica, sans-serif;
@@ -15,7 +8,7 @@ nav {
 		ul:after {
 			content: "";
 			clear: both;
-			display: inline-flex;
+			display: flex;
 
 		}
 
@@ -90,6 +83,8 @@ nav {
 				// position: relative;
 				display: none;
 				/*flex-style: space-between;*/
+				font-size: 12px;
+				padding: 0;
 				}										// nav ul ul end
 
 			ul > li {
@@ -100,7 +95,7 @@ nav {
 			ul li:hover > ul {
 				flex-flow: column nowrap;
 				flex-align: center;
-				width: 115px;
+				// width: 115px;
 			}
 
 		} // nav ul end
@@ -115,29 +110,3 @@ nav {
 		}
 
 } // nav end
-
-ul {
-	display: flex;
-}
-
-a {
-	color: $linkcol;
-}
-
-.flex-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.box {
-	width: 270px;
-	/*height: 270px;*/
-	color: $white;
-	margin: 0 auto;
-	background-color: $boxbg;
-	padding: 10px;
-	border-radius: 5px;
-	box-shadow: $boxsh;
-
-}
